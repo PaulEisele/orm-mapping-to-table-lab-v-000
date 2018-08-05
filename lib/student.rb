@@ -34,9 +34,6 @@ class Student
   end
 
   def save
-    if @id
-      update
-    else
       sql = <<-SQL
       INSERT INTO students (name, grade)
       VALUES (?, ?)
