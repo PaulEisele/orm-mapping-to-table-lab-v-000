@@ -41,8 +41,8 @@ class Student
       VALUES (?, ?)
       SQL
 
-      DB[:conn].execute(sql, self.name, self.grade)
-      self.id = DB[:conn].execute("SELECT MAX(id) FROM students")[0][0]
+      DB[:conn].execute(sql, name, grade)
+      @id = DB[:conn].execute("SELECT MAX(id) FROM students")[0][0]
     end
   end
 
